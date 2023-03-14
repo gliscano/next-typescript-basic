@@ -4,6 +4,9 @@ const nextConfig = {
     appDir: true,
     outputStandalone: true,
   },
+  images: {
+    domains: ['raw.githubusercontent.com']
+  }
 }
 
 module.exports = nextConfig

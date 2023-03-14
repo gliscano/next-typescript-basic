@@ -1,19 +1,20 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-import MainLayout from '../components/layouts/MainLayout'
+import { NextPage } from 'next';
+import { Layout } from '../components/layouts';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
-    <MainLayout>
-      <div className={styles['content-container']}>
-        <h2 className={styles.description}>
+    <Layout title="Home">
+      <div>
+         <h1 className="text-3xl font-bold underline">
           Welcome to Home Page
-        </h2>
+        </h1>
       </div>
-    </MainLayout>
-    
+    </Layout>
   )
 }
+
+export default  Home;
